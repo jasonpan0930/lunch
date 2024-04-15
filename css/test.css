@@ -1,0 +1,15 @@
+body a{
+    background-color: aquamarine;
+}
+
+body label{
+    background-color: blue;
+}
+
+/* body input{
+    background-color: blueviolet;
+} */
+
+.choose_amount{
+    background-color: blueviolet;
+}

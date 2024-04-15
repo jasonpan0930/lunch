@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>測試</title>
+  <link href="../css/test.css" rel="stylesheet" type = "text/css">
 </head>
 
 <body>
@@ -39,11 +40,10 @@
   }
   $sql = "SELECT `dish`, `price` FROM `" . $today_restaurant . "`";
   $result = mysqli_query($link, $sql);
-
   $str = '<form action="select_dish_negetive_deposit_is_allowed.php" method="post">';
   while ($dish = mysqli_fetch_row($result)) {
     $str .= '<label for="' . $dish[0] . '">' . $dish[0] ."(".$dish[1]."元)". '</label>';
-    $str .= '<input type="number" value=0 name="' . $dish[0] . '"/><br>';
+    $str .= '<input type="number" class = "choose_amount" value=0 name="' . $dish[0] . '"/><br>';
   }
   $str .= '<br><input type="submit" value="確認" />';
   $str .= '</form>';
